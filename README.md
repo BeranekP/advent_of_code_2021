@@ -7,3 +7,4 @@ https://adventofcode.com/2021
 - [Day 3: Binary Diagnostic](3)
 - [Day 4: Giant Squid](4)
 - [Day 5: Hydrothermal Venture](5)
+- [Day 6: Lanternfish](6)
