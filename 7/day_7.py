@@ -21,11 +21,12 @@ def find_fuels(data):
     fuel2_down = 0
     
     for v in data:
-        fuel2_up +=  sum(range(1, abs(v - round_up) + 1))
-        fuel2_down +=  sum(range(1, abs(v - round_down) + 1))
+        
+        fuel2_up +=  ((v-round_up)**2 + abs(v - round_up)) / 2
+        fuel2_down +=  ((v-round_down)**2 + abs(v - round_down)) / 2
         fuel1 += abs(v - med)
 
-    return fuel1, min(fuel2_up, fuel2_down)
+    return fuel1, int(min(fuel2_up, fuel2_down))
 
 fuels1, fuels2 = find_fuels(data)
 
